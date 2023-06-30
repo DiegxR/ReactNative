@@ -8,16 +8,18 @@ import { RootStackParamList } from '../Router/AppRouter';
 type HomeScreenProps = {
   navigation: NativeStackNavigationProp<RootStackParamList>;
 };
-const StartApp: React.FC<HomeScreenProps> = ({navigation}) => {
-useEffect(() => {
-    setTimeout(()=>{
-        navigation.navigate('Login')
-    },2000)
-}, [])
+
+const StartApp: React.FC<HomeScreenProps> = ({ navigation }) => {
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate('Register')
+    }, 2000)
+  }, [])
+
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <Image style={styles.image} source={require('../../assets/burger-svgrepo-com.svg')}/>
+      <Image style={styles.image} source={require('../../assets/burger-svgrepo-com.svg')} />
       <Text style={styles.title}>Gourmet experience</Text>
     </View>
   );
